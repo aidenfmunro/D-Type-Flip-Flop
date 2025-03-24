@@ -6,7 +6,13 @@
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
-  <lib desc="#Memory" name="4"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6">
     <tool name="Text Tool">
@@ -61,13 +67,12 @@
     <wire from="(140,280)" to="(190,280)"/>
     <wire from="(90,190)" to="(140,190)"/>
     <wire from="(650,180)" to="(650,250)"/>
-    <wire from="(390,340)" to="(500,340)"/>
     <wire from="(310,180)" to="(420,180)"/>
     <wire from="(320,200)" to="(420,200)"/>
     <wire from="(140,190)" to="(140,280)"/>
     <wire from="(660,130)" to="(660,210)"/>
+    <wire from="(140,340)" to="(500,340)"/>
     <wire from="(170,210)" to="(270,210)"/>
-    <wire from="(140,340)" to="(360,340)"/>
     <wire from="(310,250)" to="(340,250)"/>
     <wire from="(660,130)" to="(680,130)"/>
     <wire from="(320,130)" to="(340,130)"/>
@@ -106,46 +111,45 @@
     <wire from="(420,120)" to="(490,120)"/>
     <wire from="(420,260)" to="(490,260)"/>
     <wire from="(270,110)" to="(340,110)"/>
-    <comp lib="1" loc="(400,260)" name="NAND Gate"/>
-    <comp lib="1" loc="(400,120)" name="NAND Gate"/>
     <comp lib="1" loc="(740,260)" name="NAND Gate"/>
-    <comp lib="1" loc="(390,340)" name="NOT Gate"/>
     <comp lib="6" loc="(298,69)" name="Text">
       <a name="text" val="Master Latch"/>
+    </comp>
+    <comp lib="1" loc="(400,120)" name="NAND Gate"/>
+    <comp lib="6" loc="(853,291)" name="Text">
+      <a name="text" val="!Q"/>
     </comp>
     <comp lib="6" loc="(625,70)" name="Text">
       <a name="text" val="Slave Latch"/>
     </comp>
-    <comp lib="6" loc="(853,291)" name="Text">
-      <a name="text" val="!Q"/>
+    <comp lib="1" loc="(400,260)" name="NAND Gate"/>
+    <comp lib="6" loc="(79,79)" name="Text">
+      <a name="text" val="Data"/>
     </comp>
-    <comp lib="1" loc="(250,270)" name="NAND Gate"/>
-    <comp lib="1" loc="(600,110)" name="NAND Gate"/>
     <comp lib="0" loc="(830,260)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(250,110)" name="NAND Gate"/>
-    <comp lib="6" loc="(79,79)" name="Text">
-      <a name="text" val="Data"/>
-    </comp>
-    <comp lib="1" loc="(740,120)" name="NAND Gate"/>
-    <comp lib="6" loc="(850,91)" name="Text">
-      <a name="text" val="Q"/>
     </comp>
     <comp lib="0" loc="(830,120)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="6" loc="(79,225)" name="Text">
-      <a name="text" val="CLK"/>
+    <comp lib="1" loc="(740,120)" name="NAND Gate"/>
+    <comp lib="1" loc="(600,110)" name="NAND Gate"/>
+    <comp lib="1" loc="(250,110)" name="NAND Gate"/>
+    <comp lib="1" loc="(600,270)" name="NAND Gate"/>
+    <comp lib="1" loc="(250,270)" name="NAND Gate"/>
+    <comp lib="6" loc="(850,91)" name="Text">
+      <a name="text" val="Q"/>
     </comp>
     <comp lib="0" loc="(90,100)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
+    <comp lib="6" loc="(79,225)" name="Text">
+      <a name="text" val="CLK"/>
+    </comp>
     <comp lib="0" loc="(90,190)" name="Clock"/>
-    <comp lib="1" loc="(600,270)" name="NAND Gate"/>
   </circuit>
 </project>
